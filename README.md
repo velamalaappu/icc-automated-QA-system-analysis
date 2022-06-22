@@ -11,7 +11,8 @@ The project uses the bAbI dataset from Facebook Research. The dataset is availab
 - Each task tests a unique aspect of learning capabilities: Dialog in the restaurant domain, children's book missing word test, Movie dialog, questions-detailed answers dataset, path or localization problems....
 - For our task, there are 10,000 samples for training, and 1,000 for testing. A sample item in the set is composed of a story (several short sentences), a question and the answer to the question for training purpose. In our case, the answers are simply Yes / No answers. A sample of the dataset is show below.
 
-![](asset/sample.jpg)
+
+![image](https://user-images.githubusercontent.com/87986169/175096664-1a98d56e-d79f-4b39-938c-a1c66f68eeb6.png)
 
 # Memory Networks Architecture
 
@@ -31,6 +32,7 @@ Calculation steps:
 - The answer object is then passed through an LSTM layer (dimension reduction) followed by a dense layer resulting into output vector of the size of the vocabulary (output shape = samples x vocabulary_size). Finally, a sigmoid generates a probability distribution over the vocabulary size. In this project, due to the training objectives, the probability arbitrates over 2 words of the vocabulary: 'yes' and 'no'.
 
 Memory Networks model representation:
+![image](https://user-images.githubusercontent.com/87986169/175096771-43684be9-f969-4e63-b35c-97a1a7ddb66d.png)
 
 
 All parameters (embeddings, weight matrix to determine predicted answer) are learned during training.
